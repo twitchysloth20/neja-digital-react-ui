@@ -24,7 +24,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@neja-digital/css": "workspace:*"
+    "@neja-digital/css": "github:twitchysloth20/neja-digital-css#master"
   },
   "peerDependencies": {
     "react": "^19.2.6",

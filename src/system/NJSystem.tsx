@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import '@neja-digital/css/index.css'
+import '@neja-digital/css'
 import NJThemeProvider from '../ThemeProvider'
 import type { TNJTheme } from '../types/theme'
 
