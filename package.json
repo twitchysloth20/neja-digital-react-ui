@@ -9,6 +9,7 @@
     },
     "./react-ui.css": "./dist/index.es.css"
   },
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
