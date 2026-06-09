@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, esmExternalRequirePlugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'node:path'
@@ -21,10 +21,12 @@ export default defineConfig({
     },
 
     rolldownOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        exports: 'named',
-      },
+      // external: ['react', 'react-dom'],
+      plugins: [
+        esmExternalRequirePlugin({
+          external: [/^react(-dom)?(\/.+)?$/],
+        }),
+      ],
     },
   },
 })
