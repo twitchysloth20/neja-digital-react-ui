@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, esmExternalRequirePlugin } from 'vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import dts from 'vite-plugin-dts'
@@ -9,6 +9,9 @@ export default defineConfig({
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] }),
+    esmExternalRequirePlugin({
+      external: ['react'],
+    }),
     dts({
       entryRoot: 'src',
       outDirs: 'dist',
