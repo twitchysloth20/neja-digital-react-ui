@@ -8,11 +8,11 @@ import { resolve } from 'node:path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] }),
     esmExternalRequirePlugin({
       external: ['react'],
     }),
+    react(),
+    babel({ presets: [reactCompilerPreset()] }),
     dts({
       entryRoot: 'src',
       outDirs: 'dist',
