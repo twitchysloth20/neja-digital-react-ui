@@ -8,7 +8,7 @@
       "import": "./dist/index.js"
     },
     "./react-ui.css": {
-      "default": "./dist/react-ui.css"
+      "default": "./dist/index.css"
     }
   },
   "files": [
